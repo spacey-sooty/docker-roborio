@@ -5,5 +5,5 @@ docker import ./unpack/systemimage.tar.gz roborio:tmp
 docker build -f ./Dockerfile -t roborio:local .
 docker rmi roborio:tmp
 rm unpack -rf
-docker tag roborio:local roborio:latest
+docker tag roborio:local "roborio:$1"
 docker compose up
