@@ -1,0 +1,13 @@
+services:
+  roborio:
+    image: roborio:latest
+    networks:
+      robo_net:
+        ipv4_address: 10.47.88.2
+
+networks:
+    robo_net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 10.47.88.0/24
